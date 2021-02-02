@@ -1,4 +1,4 @@
-name: Build & Test
+name: Parameterized Testing
 on:
   pull_request:
     paths-ignore:
