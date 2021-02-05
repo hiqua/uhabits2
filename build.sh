@@ -206,13 +206,21 @@ stop_avd() {
 run_tests() {
     SIZE=$1
     run_adb_as_root
+    date
     install_test_butler
+    date
     uninstall_apk
+    date
     install_apk
+    date
     install_test_apk
+    date
     run_instrumented_tests $SIZE
+    date
     fetch_logcat
+    date
     uninstall_test_apk
+    date
 }
 
 build_android() {
