@@ -32,6 +32,8 @@ if [ ! -f "${ANDROID_HOME}/platform-tools/adb" ]; then
     exit 1
 fi
 
+uname -a
+
 
 # Logging
 # -----------------------------------------------------------------------------
