@@ -176,7 +176,7 @@ create_avd() {
     log_info "Creating AVD..."
     $AVDMANAGER create avd \
             --name $AVDNAME \
-            --package "system-images;android-$API;default;x86_64" \
+            --package "system-images;android-$API;default;x86" \
             --device "Nexus 4" || fail
 }
 
