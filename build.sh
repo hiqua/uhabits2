@@ -160,7 +160,7 @@ run_instrumented_tests() {
 
 fetch_logcat() {
     log_info "Fetching logcat..."
-    $ADB logcat -d > ${ANDROID_OUTPUTS_DIR}/logcat.txt
+    timeout 60 $ADB logcat -d > ${ANDROID_OUTPUTS_DIR}/logcat.txt
 }
 
 uninstall_test_apk() {
