@@ -315,5 +315,4 @@ END
     esac
 }
 
-main $*
-    
+main "$@"
