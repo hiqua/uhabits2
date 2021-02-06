@@ -261,6 +261,7 @@ remove_build_dirs() {
 }
 
 main() {
+    echo "$!"
     case "$1" in
         build)
             shift; parse_opts $*
@@ -288,6 +289,7 @@ main() {
                 stop_avd
                 remove_avd
             done
+            exit 0
             ;;
 
         clean)
