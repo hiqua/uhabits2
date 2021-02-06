@@ -153,7 +153,7 @@ run_instrumented_tests() {
 
     if grep "\(INSTRUMENTATION_STATUS_CODE.*-1\|FAILURES\)" $ANDROID_OUTPUTS_DIR/instrument.txt; then
         log_error "Some instrumented tests failed"
-        fetch_logcat
+        # fetch_logcat
         exit 1
     fi
 }
