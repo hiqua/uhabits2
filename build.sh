@@ -286,8 +286,8 @@ main() {
                 create_avd $api
                 run_avd
                 run_tests large
-                stop_avd
-                remove_avd
+                # stop_avd
+                # remove_avd
             done
             exit 0
             ;;
