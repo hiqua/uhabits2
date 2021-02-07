@@ -261,13 +261,14 @@ remove_build_dirs() {
 }
 
 main() {
-    echo "$!"
+    echo "$@"
     case "$1" in
         build)
             shift; parse_opts $*
             ktlint
             build_core
             build_android
+            exit 0
             ;;
 
         medium-tests)
@@ -294,6 +295,7 @@ main() {
 
         clean)
             remove_build_dirs
+            exit 0
             ;;
 
         *)
