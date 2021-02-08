@@ -219,7 +219,7 @@ run_tests() {
     date
     # fetch_logcat
     # date
-    uninstall_test_apk
+    # uninstall_test_apk
     date
 }
 
