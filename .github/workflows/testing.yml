@@ -1,9 +1,9 @@
 name: Large Tests
-on:
-  workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Test scenario tags'
+# o:
+#   workflow_dispatch:
+#     inputs:
+#       tags:
+#         description: 'Test scenario tags'
 jobs:
   build:
     runs-on: ubuntu-latest
