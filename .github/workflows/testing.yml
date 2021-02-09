@@ -1,17 +1,7 @@
-name: Parameterized Testing
+name: Large Tests
 on:
-  pull_request:
-    paths-ignore:
-    - '**.md'
-  push:
-    paths-ignore:
-    - '**.md'
   workflow_dispatch:
     inputs:
-      testCategory:
-        description: 'Test Category'
-        required: true
-        default: 'medium-tests'
       tags:
         description: 'Test scenario tags'
 jobs:
@@ -61,5 +51,4 @@ jobs:
       uses: ReactiveCircus/android-emulator-runner@v2
       with:
         api-level: ${{ matrix.api-level }}
-        script: ./build.sh ${{ github.event.inputs.testCategory }}
-        arch: x86_64
+        script: ./build.sh large-tests
