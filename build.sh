@@ -186,7 +186,8 @@ remove_avd() {
 
 create_avd() {
     API=$1
-    log_info "Creating AVD..."
+    log_info "Creating AVD... with API: $API"
+    set -x
     $AVDMANAGER create avd \
             --name $AVDNAME \
             --package "system-images;android-$API;default;x86_64" \
